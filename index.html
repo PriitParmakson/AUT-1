@@ -33,7 +33,7 @@
 <h1>Autentimise abimees</h1>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Millest alustada autentimislahenduse valikul?</h2>
+  <h3>Millest alustada autentimislahenduse valikul?</h3>
   <p>Selgitada välja, mis liiki on e-teenus, mille kasutajaid tuleb autentida.</p>
   <form>
       <div class="radio"><label><input type="radio" id='Avalik' name="teenuseT">avalik</label></div>
@@ -49,8 +49,8 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Kas kasutajaid peab alati tuvastama?</h2>
-  <p>Ei pea. Sõltub pakutava e-teeuse olemusest:</p>
+  <h3>Kas kasutajaid peab alati tuvastama?</h3>
+  <p>Ei pea. Sõltub pakutava e-teenuse olemusest:</p>
   <form>
     <div class="radio"><label><input type="radio" id='EiE' name="eeldabT">ei</label></div>
     <div class="radio"><label><input type="radio" id='JaE' name="eeldabT">jah</label></div>
@@ -60,7 +60,7 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Kas saaks läbi ka ilma autentimiseta?</h2>
+  <h3>Kas saaks läbi ka ilma autentimiseta?</h3>
   <p>Ühe autentimisega sisenemine mitmesse teenusesse (SSO)?</p>
   <form>
     <div class="radio"><label><input type="radio" id='SSOe' name="SSOT">ei</label></div>
@@ -69,16 +69,17 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Milline on autenditava varustus?</h2>
+  <h3>Milline on autenditava varustus?</h3>
   <p></p>
   <form>
     <div class="radio"><label><input type="radio" id='1EqT' name="EqT">laua- või sülearvuti</label></div>
     <div class="radio"><label><input type="radio" id='2EqT' name="EqT">nutiseade</label></div>
+    <div class="radio"><label><input type="radio" id='2EqT' name="EqT">ID-kaardi lugeja</label></div>
   </form>  
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Kes on autenditav subjekt?</h2>
+  <h3>Kes on autenditav subjekt?</h3>
   <p></p>
   <form>
 	<div class="radio"><label><input type="radio" id='Isik' name="optradio">isik</label></div>
@@ -101,7 +102,7 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Millist e-identimise süsteemi/vahendit kasutada?</h2>
+  <h3>Millist e-identimise süsteemi/vahendit kasutada?</h3>
   <p></p>
   <form>
 	<div class="radio"><label><input type="radio" id='IDkaart' name="idS">ID-kaart</label></div>
@@ -126,7 +127,7 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2>Autentiv rakendus</h2>
+  <h3>Autentiv rakendus</h3>
   <p></p>
   <form>
 <div class="radio"><label><input type="radio" id='iseR' name="autR">e-teenust pakkuv süsteem ise</label></div>
@@ -146,31 +147,20 @@
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2></h2>
+  <h3></h3>
   <p></p>
   <form>
   </form>  
 </div></div>
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-  <h2></h2>
+  <h3></h3>
   <p></p>
   <form>
   </form>  
 </div></div>
 
-
-
-
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-<h2>Allikaid ja selgitusi</h2>
-  <h3>Mis on autentimine?</h3>
-  <ul>
-    <li>Autentimine on protseduur, millega tehakse kindlaks e-teenuse kasutaja isik; s.t isik, kellele e-teenust osutatakse - kes ta on või keda ta väidab end olevat.</li>
-    <li>Autentimine on oluline nii kasutaja kui ka e-teenuse osutaja, samuti teiste isikute kaitseks. Identiteedivargused, andmelekete jm väärnähtused on tagajärjed võivad olla väga tõsised. Personaliseeritud e-teenuste osutamisel ei saa läbi kasutajate autentimiseta.</li>
-    <li>Laiemas tähenduses on autentimine ka sõnumi või muu teabe tervikluse kontrollimine (andmeautentimine, teave on autentne = ei ole muudetud).</li>
-  </ul>
-
   <h3>Autentimismeetodid</h3>
   <p>Autentimismeetodeid s.t viise inimese tuvastamiseks on erinevaid. Standardimisorganisatsioon OASIS liigitab autentimismeetodid (õigemini: -tegurid) viide kategooriasse.</p>
   <ul>
@@ -187,21 +177,21 @@
       </tr>
     </thead>
     <tbody>
-<tr><td>1 KES SA OLED (*what you are*) - biomeetrilised meetodid (*biometric*) </td><td>Olemuslik autentimistegur – autentimistegur, mis põhineb füüsilise isiku füüsilisel omadusel ja mille puhul peab subjekt tõendama, et tal on see füüsiline omadus (eIDAS).</td></tr>
-<tr><td>1.1 füüsiline biomeetrika (*physical biometric*) </td><td> Näiteks: nägu, silma võrkkest, sõrmejälg, hääl; elusolemise tegurid: pulss, CAPTCHA, temperatuur.</td></tr>
-<tr><td>1.2 käitumuslik biomeetrika (*behavioral biometric*) </td><td> Näiteks: sõrmistiku kasutamise eripära; hääl.</td></tr>
-<tr><td>2 MIDA SA TEAD (*what you know *) </td><td> Teabel põhinev autentimistegur – autentimistegur, mille puhul peab subjekt tõendama, et ta teab seda (eIDAS-e).</td></tr>
-<tr><td>2.1 kasutaja nimi ja parool </td><td></td></tr>
-<tr><td>2.2 teadmuspõhine autentimine (*knowledge based authentication (KBA)*) </td><td> Küsimuste esitamisega autenditavale subjektile.</td></tr>
-<tr><td>2.2.1 staatiline KBA </td><td> Ühed ja samad küsimused.</td></tr>
-<tr><td>2.2.2 dünaamiline KBA </td><td> Muutuvad küsimused.</td></tr>
-<tr><td>3 MIDA SA OMAD (*what you have*) </td><td> Millegi omamisel põhinev autentimistegur - autentimistegur, mille puhul peab subjekt tõendama, et tal on see olemas (eIDAS-e).</td></tr>
-<tr><td>3.1 lõpp-punkti identiteet (*end point identity*) </td><td></td></tr>
-<tr><td>3.2 tõend (*token*) </td><td></td></tr>
-<tr><td>3.3 kanaliväline (*out of band*) </td><td></td></tr>
-<tr><td>3.4 ühekordne parool (*one time password (OTP)*) </td><td></td></tr>
-<tr><td>4 MIDA SA TAVALISELT TEED (*what you typically do*) </td><td></td></tr>
-<tr><td>5 KONTEKST </td><td> Kontektisteabe (näiteks: asukoht; pöördumise aeg; pöördumise sagedus jm.) kasutamine autentimisotsuse tegemisel.</td></tr>
+    <tr><td>1 KES SA OLED (*what you are*) - biomeetrilised meetodid (*biometric*) </td><td>Olemuslik autentimistegur – autentimistegur, mis põhineb füüsilise isiku füüsilisel omadusel ja mille puhul peab subjekt tõendama, et tal on see füüsiline omadus (eIDAS).</td></tr>
+    <tr><td>1.1 füüsiline biomeetrika (*physical biometric*) </td><td> Näiteks: nägu, silma võrkkest, sõrmejälg, hääl; elusolemise tegurid: pulss, CAPTCHA, temperatuur.</td></tr>
+    <tr><td>1.2 käitumuslik biomeetrika (*behavioral biometric*) </td><td> Näiteks: sõrmistiku kasutamise eripära; hääl.</td></tr>
+    <tr><td>2 MIDA SA TEAD (*what you know *) </td><td> Teabel põhinev autentimistegur – autentimistegur, mille puhul peab subjekt tõendama, et ta teab seda (eIDAS-e).</td></tr>
+    <tr><td>2.1 kasutaja nimi ja parool </td><td></td></tr>
+    <tr><td>2.2 teadmuspõhine autentimine (*knowledge based authentication (KBA)*) </td><td> Küsimuste esitamisega autenditavale subjektile.</td></tr>
+    <tr><td>2.2.1 staatiline KBA </td><td> Ühed ja samad küsimused.</td></tr>
+    <tr><td>2.2.2 dünaamiline KBA </td><td> Muutuvad küsimused.</td></tr>
+    <tr><td>3 MIDA SA OMAD (*what you have*) </td><td> Millegi omamisel põhinev autentimistegur - autentimistegur, mille puhul peab subjekt tõendama, et tal on see olemas (eIDAS-e).</td></tr>
+    <tr><td>3.1 lõpp-punkti identiteet (*end point identity*) </td><td></td></tr>
+    <tr><td>3.2 tõend (*token*) </td><td></td></tr>
+    <tr><td>3.3 kanaliväline (*out of band*) </td><td></td></tr>
+    <tr><td>3.4 ühekordne parool (*one time password (OTP)*) </td><td></td></tr>
+    <tr><td>4 MIDA SA TAVALISELT TEED (*what you typically do*) </td><td></td></tr>
+    <tr><td>5 KONTEKST </td><td> Kontektisteabe (näiteks: asukoht; pöördumise aeg; pöördumise sagedus jm.) kasutamine autentimisotsuse tegemisel.</td></tr>
     </tbody>
   </table>
 
