@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Autentimislahenduste taksonoomia</title>
+  <title>Autentimise abimees</title>
   <meta name="viewport" content="width=device-width" initial-scale="1">
 	
 	<!-- NB! Kuna pilvest antakse https-ga, siis kõik laadimised ka sellega. -->
@@ -30,28 +30,33 @@
 <body>
 
 <div class='container'>
-<h1>Autentimislahendused. Taksonoomia</h1>	
+<h1>Autentimise abimees</h1>
+
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Millest alustada autentimislahenduse valikul?</h2>
+  <p>Selgitada välja, mis liiki on e-teenus, mille kasutajaid tuleb autentida.</p>
+  <form>
+      <div class="radio"><label><input type="radio" id='Avalik' name="teenuseT">avalik</label></div>
+      <div class="radio"><label><input type="radio" id='AvHSisene' name="teenuseT">avaliku halduse sisene</label></div>
+
+     <div style='margin-left: 1em;'><!-- Asutusesisene -->
+      <div class="radio">
+    	<label><input type="radio" id='Asutusesisene' class='asutT' name="asutT" disabled>asutusesisene</label></div>
+      	<div class="radio"><label><input type="radio" id='Asutuseylene' class='asutT' name="asutT" disabled>asutuseülene</label>
+      	</div>
+     	</div>
+  </form>  
+  
+  
+</div></div>
+
 <div class="row">
 
 	<!-- e-teenus -->
 	<div class="col-sm-3 col-md-3 aspekt">
     <h1>1</h1>  
   	<p>e-teenus</p>	
-  	<form>
-  	    <div class="radio"><label><input type="radio" id='Avalik' name="teenuseT">avalik</label></div>
-      	    <div class="radio"><label><input type="radio" id='AvHSisene' name="teenuseT">avaliku halduse sisene</label></div>
 
-     		<div style='margin-left: 1em;'><!-- Asutusesisene -->
-  		    <div class="radio">
-  	    	  	<label><input type="radio" id='Asutusesisene' class='asutT' name="asutT" disabled>asutusesisene</label>
-  	    	</div>
-
-  	    	<div class="radio">
-  	      		<label><input type="radio" id='Asutuseylene' class='asutT' name="asutT" disabled>asutuseülene</label>
-  	    	</div>
-     		</div>
-
-  	</form>
   </div>  
 
 	<!-- Eeldab kasutaja tuvastamist -->
