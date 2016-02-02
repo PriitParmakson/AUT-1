@@ -46,181 +46,121 @@
       	</div>
      	</div>
   </form>  
-  
-  
 </div></div>
 
-<div class="row">
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Kas kasutajaid peab alati tuvastama?</h2>
+  <p>Ei pea. Sõltub pakutava e-teeuse olemusest:</p>
+  <form>
+    <div class="radio"><label><input type="radio" id='EiE' name="eeldabT">ei</label></div>
+    <div class="radio"><label><input type="radio" id='JaE' name="eeldabT">jah</label></div>
+    <div class="radio"><label><input type="radio" id='AtrE' name="eeldabT">
+    piisab kasutajal mõne tunnuse olemasolu tuvastamisest</label></div>
+  </form>  
+</div></div>
 
-	<!-- e-teenus -->
-	<div class="col-sm-3 col-md-3 aspekt">
-    <h1>1</h1>  
-  	<p>e-teenus</p>	
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Kas saaks läbi ka ilma autentimiseta?</h2>
+  <p>Ühe autentimisega sisenemine mitmesse teenusesse (SSO)?</p>
+  <form>
+    <div class="radio"><label><input type="radio" id='SSOe' name="SSOT">ei</label></div>
+    <div class="radio"><label><input type="radio" id='SSOj' name="SSOT">jah</label></div>
+  </form>  
+</div></div>
 
-  </div>  
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Milline on autenditava varustus?</h2>
+  <p></p>
+  <form>
+    <div class="radio"><label><input type="radio" id='1EqT' name="EqT">laua- või sülearvuti</label></div>
+    <div class="radio"><label><input type="radio" id='2EqT' name="EqT">nutiseade</label></div>
+  </form>  
+</div></div>
 
-	<!-- Eeldab kasutaja tuvastamist -->
-	<div class="col-sm-3 col-md-3 aspekt">
-    <h1>2</h1>  
-  	<p>Eeldab kasutaja tuvastamist</p>	
-  	<form>
-  	    <div class="radio">
-      	  	<label><input type="radio" id='EiE' name="eeldabT">ei</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='JaE' name="eeldabT">jah</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='AtrE' name="eeldabT">piisab kasutajal mõne tunnuse olemasolu tuvastamisest</label>
-      	</div>
-      <p>Ühe autentimisega sisenemine mitmesse teenusesse (SSO)?</p>
-        <div class="radio">
-            <label><input type="radio" id='SSOe' name="SSOT">ei</label>
-        </div>
-
-        <div class="radio">
-            <label><input type="radio" id='SSOj' name="SSOT">jah</label>
-        </div>
-      <p>Autenditava varustus</p>
-        <div class="radio">
-            <label><input type="radio" id='1EqT' name="EqT">laua- või sülearvuti</label>
-        </div>
-
-        <div class="radio">
-            <label><input type="radio" id='2EqT' name="EqT">nutiseade</label>
-        </div>
-  	</form>
-  </div>
-
-	<!-- Autenditav subjekt -->
-	<div class="col-sm-3 col-md-3 aspekt">
-    <h1>3</h1>  
-  	<p>Autenditav subjekt</p>	
-  	<form>
-  	    <div class="radio">
-      	  	<label><input type="radio" id='Isik' name="optradio">isik</label>
-      	</div>
-      		<div style='margin-left: 1em;'><!-- Isikute tüübid -->
-  				<div class="checkbox">
-  				  <label><input type="checkbox" class='isikuT' value="" disabled>anonüümne</label>
-  				</div>
-  				<div class="checkbox">
-  				  <label><input type="checkbox" class='isikuT' value="" disabled>EE kodanik</label>
-  				</div>
-  				<div class="checkbox disabled">
-  				  <label><input type="checkbox" class='isikuT' value="" disabled>EU kodanik</label>
-  				</div>
-  				<div class="checkbox disabled">
-  				  <label><input type="checkbox" class='isikuT' value="" disabled>ametnik</label>
-  				</div>  
-  			</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='Masin' name="optradio">masin</label>
-      	</div>
-  	</form>
-  </div>
-
-	<!--e-identimise süsteem/vahend -->
-	<div class="col-sm-3 col-md-3 aspekt">
-    <h1>4</h1>  
-  	<p>e-identimise süsteem/vahend</p>	
-  	<form>
-  	    <div class="radio">
-      	  	<label><input type="radio" id='IDkaart' name="idS">ID-kaart</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='mID' name="idS">mobiil-ID</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='asutKK' name="idS">asutuse kasutajate kataloog (LDAP)</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='sysKK' name="idS">süsteemis loodud kasutajakonto/parool</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='sotsS' name="idS">sotsiaalvõrgustik</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='eIDASS' name="idS">EU liikmesriigi tunnustatud e-identimissüsteem (eIDAS)</label>
-      	</div>
-      		<div style='margin-left: 1em;' class='radio'><!-- Usaldustasemed -->
-  	      		<label><input type="radio" id='korgT' name="usalT">kõrge usaldustase</label>
-  	      		<label><input type="radio" id='markT' name="usalT">märkimisväärne usaldustase</label>
-  	      		<label><input type="radio" id='madalT' name="usalT">madal usaldustase</label>
-      		</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='IPS' name="idS">seadme IP aadressi järgi</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='stS' name="idS">seadme tüübi järgi</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='cookieS' name="idS">veebisirvija küpsise järgi</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='kbaS' name="idS">teadmuspõhise autentimise kasutamisega</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='olemBS' name="idS">olemuspõhise autentimise (füüsilise biomeetrilise autentimise) kasutamisega</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='kaitBS' name="idS">olemuspõhise autentimise (käitumusliku biomeetrilise autentimise) kasutamisega</label>
-      	</div>
-
-  	</form>
-  </div>
-
-	<!--Autentiv rakendus -->
-	<div class="col-sm-3 col-md-3 aspekt">
-    <h1>5</h1>  
-  	<p>Autentiv rakendus</p>	
-  	<form>
-  	    <div class="radio">
-      	  	<label><input type="radio" id='iseR' name="autR">e-teenust pakkuv süsteem ise</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='asutR' name="autR">asutuse ühtne autentimislahendus</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='pangaR' name="autR">Pangalink</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='EER' name="autR">eIDAS EE sõlm</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='EUR' name="autR">eIDAS EU teise liikmesriigi sõlm</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='sotsS' name="autR">sotsiaalvõrgustik</label>
-      	</div>
-
-      	<div class="radio">
-        		<label><input type="radio" id='legacyS' name="autR">eesti.ee, "sessiooni üleandmisega"</label>
-      	</div>
-
-  	</form>
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Kes on autenditav subjekt?</h2>
+  <p></p>
+  <form>
+	<div class="radio"><label><input type="radio" id='Isik' name="optradio">isik</label></div>
+	<div style='margin-left: 1em;'><!-- Isikute tüübid -->
+	  <div class="checkbox">
+	    <label><input type="checkbox" class='isikuT' value="" disabled>anonüümne</label>
+	  </div>
+	  <div class="checkbox">
+	    <label><input type="checkbox" class='isikuT' value="" disabled>EE kodanik</label>
+	  </div>
+	  <div class="checkbox disabled">
+	    <label><input type="checkbox" class='isikuT' value="" disabled>EU kodanik</label>
+	  </div>
+	  <div class="checkbox disabled">
+	    <label><input type="checkbox" class='isikuT' value="" disabled>ametnik</label>
+	  </div>  
 	</div>
+	<div class="radio"><label><input type="radio" id='Masin' name="optradio">masin</label></div>
+  </form>  
+</div></div>
 
-</div><!-- row -->	
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Millist e-identimise süsteemi/vahendit kasutada?</h2>
+  <p></p>
+  <form>
+	<div class="radio"><label><input type="radio" id='IDkaart' name="idS">ID-kaart</label></div>
+	<div class="radio"><label><input type="radio" id='mID' name="idS">mobiil-ID</label></div>
+	<div class="radio"><label><input type="radio" id='asutKK' name="idS">asutuse kasutajate kataloog (LDAP)</label></div>
+	<div class="radio"><label><input type="radio" id='sysKK' name="idS">süsteemis loodud kasutajakonto/parool</label></div>
+	<div class="radio"><label><input type="radio" id='sotsS' name="idS">sotsiaalvõrgustik</label></div>
+	<div class="radio"><label><input type="radio" id='eIDASS' name="idS">EU liikmesriigi tunnustatud e-identimissüsteem (eIDAS)</label>
+	</div>
+	<div style='margin-left: 1em;' class='radio'><!-- Usaldustasemed -->
+	<label><input type="radio" id='korgT' name="usalT">kõrge usaldustase</label>
+	<label><input type="radio" id='markT' name="usalT">märkimisväärne usaldustase</label>
+	<label><input type="radio" id='madalT' name="usalT">madal usaldustase</label>
+	</div>
+	<div class="radio"><label><input type="radio" id='IPS' name="idS">seadme IP aadressi järgi</label></div>
+	<div class="radio"><label><input type="radio" id='stS' name="idS">seadme tüübi järgi</label></div>
+	<div class="radio"><label><input type="radio" id='cookieS' name="idS">veebisirvija küpsise järgi</label></div>
+	<div class="radio"><label><input type="radio" id='kbaS' name="idS">teadmuspõhise autentimise kasutamisega</label></div>
+	<div class="radio"><label><input type="radio" id='olemBS' name="idS">olemuspõhise autentimise (füüsilise biomeetrilise autentimise) kasutamisega</label></div>
+	<div class="radio"><label><input type="radio" id='kaitBS' name="idS">olemuspõhise autentimise (käitumusliku biomeetrilise autentimise) kasutamisega</label></div>
+  </form>  
+</div></div>
+
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2>Autentiv rakendus</h2>
+  <p></p>
+  <form>
+<div class="radio"><label><input type="radio" id='iseR' name="autR">e-teenust pakkuv süsteem ise</label></div>
+<div class="radio"><label><input type="radio" id='asutR' name="autR">asutuse ühtne autentimislahendus</label>
+</div>
+<div class="radio"><label><input type="radio" id='pangaR' name="autR">Pangalink</label></div>
+
+<div class="radio"><label><input type="radio" id='EER' name="autR">eIDAS EE sõlm</label>
+</div>
+<div class="radio"><label><input type="radio" id='EUR' name="autR">eIDAS EU teise liikmesriigi sõlm</label></div>
+<div class="radio"><label><input type="radio" id='sotsS' name="autR">sotsiaalvõrgustik</label></div>
+
+<div class="radio"><label><input type="radio" id='legacyS' name="autR">eesti.ee, "sessiooni üleandmisega"</label>
+</div>
+
+  </form>  
+</div></div>
+
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2></h2>
+  <p></p>
+  <form>
+  </form>  
+</div></div>
+
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+  <h2></h2>
+  <p></p>
+  <form>
+  </form>  
+</div></div>
+
+
+
 
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
 <h2>Allikaid ja selgitusi</h2>
