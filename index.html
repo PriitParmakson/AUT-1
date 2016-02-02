@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Autentimislahenduste taksonoomia</title>
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+	
+	<!-- NB! Kuna pilvest antakse https-ga, siis kõik laadimised ka sellega. -->
+	
+	<!-- Underscore -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	
+	<!-- JQuery (necessary for Bootstrap's JavaScript plugins) -->
+  	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<!-- Bootstrap -->
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	
+	<!-- Fondid -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
+	<link rel='stylesheet' href='STIILID.css'>	
+	
+	<script src='TOOTLUS.js'></script>
+		
+</head>	
+
+<body>
+
+<div class='container'>
+<h1>Autentimislahendused. Taksonoomia</h1>	
+<div class="row">
+
+	<!-- e-teenus -->
+	<div class="col-sm-3 col-md-3 aspekt">
+    <h1>1</h1>  
+  	<p>e-teenus</p>	
+  	<form>
+  	    <div class="radio"><label><input type="radio" id='Avalik' name="teenuseT">avalik</label></div>
+      	    <div class="radio"><label><input type="radio" id='AvHSisene' name="teenuseT">avaliku halduse sisene</label></div>
+
+     		<div style='margin-left: 1em;'><!-- Asutusesisene -->
+  		    <div class="radio">
+  	    	  	<label><input type="radio" id='Asutusesisene' class='asutT' name="asutT" disabled>asutusesisene</label>
+  	    	</div>
+
+  	    	<div class="radio">
+  	      		<label><input type="radio" id='Asutuseylene' class='asutT' name="asutT" disabled>asutuseülene</label>
+  	    	</div>
+     		</div>
+
+  	</form>
+  </div>  
+
+	<!-- Eeldab kasutaja tuvastamist -->
+	<div class="col-sm-3 col-md-3 aspekt">
+    <h1>2</h1>  
+  	<p>Eeldab kasutaja tuvastamist</p>	
+  	<form>
+  	    <div class="radio">
+      	  	<label><input type="radio" id='EiE' name="eeldabT">ei</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='JaE' name="eeldabT">jah</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='AtrE' name="eeldabT">piisab kasutajal mõne tunnuse olemasolu tuvastamisest</label>
+      	</div>
+      <p>Ühe autentimisega sisenemine mitmesse teenusesse (SSO)?</p>
+        <div class="radio">
+            <label><input type="radio" id='SSOe' name="SSOT">ei</label>
+        </div>
+
+        <div class="radio">
+            <label><input type="radio" id='SSOj' name="SSOT">jah</label>
+        </div>
+      <p>Autenditava varustus</p>
+        <div class="radio">
+            <label><input type="radio" id='1EqT' name="EqT">laua- või sülearvuti</label>
+        </div>
+
+        <div class="radio">
+            <label><input type="radio" id='2EqT' name="EqT">nutiseade</label>
+        </div>
+  	</form>
+  </div>
+
+	<!-- Autenditav subjekt -->
+	<div class="col-sm-3 col-md-3 aspekt">
+    <h1>3</h1>  
+  	<p>Autenditav subjekt</p>	
+  	<form>
+  	    <div class="radio">
+      	  	<label><input type="radio" id='Isik' name="optradio">isik</label>
+      	</div>
+      		<div style='margin-left: 1em;'><!-- Isikute tüübid -->
+  				<div class="checkbox">
+  				  <label><input type="checkbox" class='isikuT' value="" disabled>anonüümne</label>
+  				</div>
+  				<div class="checkbox">
+  				  <label><input type="checkbox" class='isikuT' value="" disabled>EE kodanik</label>
+  				</div>
+  				<div class="checkbox disabled">
+  				  <label><input type="checkbox" class='isikuT' value="" disabled>EU kodanik</label>
+  				</div>
+  				<div class="checkbox disabled">
+  				  <label><input type="checkbox" class='isikuT' value="" disabled>ametnik</label>
+  				</div>  
+  			</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='Masin' name="optradio">masin</label>
+      	</div>
+  	</form>
+  </div>
+
+	<!--e-identimise süsteem/vahend -->
+	<div class="col-sm-3 col-md-3 aspekt">
+    <h1>4</h1>  
+  	<p>e-identimise süsteem/vahend</p>	
+  	<form>
+  	    <div class="radio">
+      	  	<label><input type="radio" id='IDkaart' name="idS">ID-kaart</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='mID' name="idS">mobiil-ID</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='asutKK' name="idS">asutuse kasutajate kataloog (LDAP)</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='sysKK' name="idS">süsteemis loodud kasutajakonto/parool</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='sotsS' name="idS">sotsiaalvõrgustik</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='eIDASS' name="idS">EU liikmesriigi tunnustatud e-identimissüsteem (eIDAS)</label>
+      	</div>
+      		<div style='margin-left: 1em;' class='radio'><!-- Usaldustasemed -->
+  	      		<label><input type="radio" id='korgT' name="usalT">kõrge usaldustase</label>
+  	      		<label><input type="radio" id='markT' name="usalT">märkimisväärne usaldustase</label>
+  	      		<label><input type="radio" id='madalT' name="usalT">madal usaldustase</label>
+      		</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='IPS' name="idS">seadme IP aadressi järgi</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='stS' name="idS">seadme tüübi järgi</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='cookieS' name="idS">veebisirvija küpsise järgi</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='kbaS' name="idS">teadmuspõhise autentimise kasutamisega</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='olemBS' name="idS">olemuspõhise autentimise (füüsilise biomeetrilise autentimise) kasutamisega</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='kaitBS' name="idS">olemuspõhise autentimise (käitumusliku biomeetrilise autentimise) kasutamisega</label>
+      	</div>
+
+  	</form>
+  </div>
+
+	<!--Autentiv rakendus -->
+	<div class="col-sm-3 col-md-3 aspekt">
+    <h1>5</h1>  
+  	<p>Autentiv rakendus</p>	
+  	<form>
+  	    <div class="radio">
+      	  	<label><input type="radio" id='iseR' name="autR">e-teenust pakkuv süsteem ise</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='asutR' name="autR">asutuse ühtne autentimislahendus</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='pangaR' name="autR">Pangalink</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='EER' name="autR">eIDAS EE sõlm</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='EUR' name="autR">eIDAS EU teise liikmesriigi sõlm</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='sotsS' name="autR">sotsiaalvõrgustik</label>
+      	</div>
+
+      	<div class="radio">
+        		<label><input type="radio" id='legacyS' name="autR">eesti.ee, "sessiooni üleandmisega"</label>
+      	</div>
+
+  	</form>
+	</div>
+
+</div><!-- row -->	
+
+<div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
+<h2>Allikaid ja selgitusi</h2>
+  <h3>Mis on autentimine?</h3>
+  <ul>
+    <li>Autentimine on protseduur, millega tehakse kindlaks e-teenuse kasutaja isik; s.t isik, kellele e-teenust osutatakse - kes ta on või keda ta väidab end olevat.</li>
+    <li>Autentimine on oluline nii kasutaja kui ka e-teenuse osutaja, samuti teiste isikute kaitseks. Identiteedivargused, andmelekete jm väärnähtused on tagajärjed võivad olla väga tõsised. Personaliseeritud e-teenuste osutamisel ei saa läbi kasutajate autentimiseta.</li>
+    <li>Laiemas tähenduses on autentimine ka sõnumi või muu teabe tervikluse kontrollimine (andmeautentimine, teave on autentne = ei ole muudetud).</li>
+  </ul>
+
+  <h3>Autentimismeetodid</h3>
+  <p>Autentimismeetodeid s.t viise inimese tuvastamiseks on erinevaid. Standardimisorganisatsioon OASIS liigitab autentimismeetodid (õigemini: -tegurid) viide kategooriasse.</p>
+  <ul>
+    <li><a href='https://www.oasis-open.org/committees/trust-el/'>OASIS [Trust Elevation TC</a>.</li> 
+    <li>OASIS (2015) <a href='https://www.oasis-open.org/committees/download.php/46987/trust-el-survey-v1.0-wd01.doc'>Survey of Methods of Trust Elevation Version 1.0</a>.</li>
+    <li>OASIS (2013) <a href='https://www.oasis-open.org/committees/download.php/46987/trust-el-survey-v1.0-wd01.doc'>Analysis of Methods of Trust Elevation Version 1.0</a>.</li>
+   </ul>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>kategooria</th>
+        <th>selgitus</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td>1 KES SA OLED (*what you are*) - biomeetrilised meetodid (*biometric*) </td><td>Olemuslik autentimistegur – autentimistegur, mis põhineb füüsilise isiku füüsilisel omadusel ja mille puhul peab subjekt tõendama, et tal on see füüsiline omadus (eIDAS).</td></tr>
+<tr><td>1.1 füüsiline biomeetrika (*physical biometric*) </td><td> Näiteks: nägu, silma võrkkest, sõrmejälg, hääl; elusolemise tegurid: pulss, CAPTCHA, temperatuur.</td></tr>
+<tr><td>1.2 käitumuslik biomeetrika (*behavioral biometric*) </td><td> Näiteks: sõrmistiku kasutamise eripära; hääl.</td></tr>
+<tr><td>2 MIDA SA TEAD (*what you know *) </td><td> Teabel põhinev autentimistegur – autentimistegur, mille puhul peab subjekt tõendama, et ta teab seda (eIDAS-e).</td></tr>
+<tr><td>2.1 kasutaja nimi ja parool </td><td></td></tr>
+<tr><td>2.2 teadmuspõhine autentimine (*knowledge based authentication (KBA)*) </td><td> Küsimuste esitamisega autenditavale subjektile.</td></tr>
+<tr><td>2.2.1 staatiline KBA </td><td> Ühed ja samad küsimused.</td></tr>
+<tr><td>2.2.2 dünaamiline KBA </td><td> Muutuvad küsimused.</td></tr>
+<tr><td>3 MIDA SA OMAD (*what you have*) </td><td> Millegi omamisel põhinev autentimistegur - autentimistegur, mille puhul peab subjekt tõendama, et tal on see olemas (eIDAS-e).</td></tr>
+<tr><td>3.1 lõpp-punkti identiteet (*end point identity*) </td><td></td></tr>
+<tr><td>3.2 tõend (*token*) </td><td></td></tr>
+<tr><td>3.3 kanaliväline (*out of band*) </td><td></td></tr>
+<tr><td>3.4 ühekordne parool (*one time password (OTP)*) </td><td></td></tr>
+<tr><td>4 MIDA SA TAVALISELT TEED (*what you typically do*) </td><td></td></tr>
+<tr><td>5 KONTEKST </td><td> Kontektisteabe (näiteks: asukoht; pöördumise aeg; pöördumise sagedus jm.) kasutamine autentimisotsuse tegemisel.</td></tr>
+    </tbody>
+  </table>
+
+<p>Autentimismeetodeid kasutatakse sageli kombineeritult. Sellisel juhul räägitakse mitmetegurilisest autentimisest (ingl multi-factor authentication).</p>
+<ul>
+  <li>Andris Reinman (2015) <a href='http://www.andrisreinman.com/2015/10/kahefaktorilisest-autentimisest.html'>
+    Kahefaktorilisest autentimisest</a>.</li>
+</ul>  
+
+<h3>Autentimine piiriülestes e-teenustes</h3>
+<p>Autentimist piiriülestes e-teenustes reguleerivad 2014. a EL määrus (eIDAS) ja selle rakendusaktid. Määruse rakendamine on käimasolev protsess.</p> 
+<ul>
+  <li>European Commission. <a href='http://ec.europa.eu/digital-agenda/en/trust-services-and-eid'>Trust Services and eID</a>.</li>
+  <li>[EL 910/2014] Euroopa Parlamendi ja Nõukogu määrus (EL) nr 910/2014, 23.. juuli 2014, e-identimise ja e-tehingute jaoks
+  vajalike usaldusteenuste kohta siseturul. <a href='http://eur-lex.europa.eu/legal-content/ET/TXT/HTML/?uri=CELEX:32014R0910'>ET</a>;
+  <a href='http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32014R0910&from=EN'>EN</a>.</li>
+  <li>[EL 2015/1501] Komisjoni rakendusmäärus (EL) 2015/1501, 8. september 2015, koostalitlusvõime raamistiku kohta.
+  <a href='http://eur-lex.europa.eu/legal-content/ET/TXT/HTML/?uri=CELEX:32015R1501'>ET</a>;
+  <a href='http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32015R1501'>EN</a>.</li>
+  <li>[EL 2015/1502] Komisjoni rakendusmäärus (EL) 2015/1502, 8. september 2015, millega kehtestatakse e-identimise vahendite 
+  usaldusväärsuse tasemete minimaalsed tehnilised kirjeldused ja menetlused.
+  <a href='http://eur-lex.europa.eu/legal-content/ET/TXT/HTML/?uri=CELEX:32015R1502'>ET</a>;
+  <a href='http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32015R1502&from=EN'>EN</a>.</li>
+  <li>European Commission (2015) <a href='https://joinup.ec.europa.eu/software/cefeid/document/getting-started-guide-introduction-connecting-europe-facility-eid-building-'>
+  	Introduction to the Connecting Europe Facility eID building block</a>.</li>
+  <li>European Commission (2015) <a href='https://joinup.ec.europa.eu/software/cefeid/document/eidas-technical-specifications-v10'>eIDAS Technical Specifications v1.0</a>.</li>
+</ul>
+
+<p>eIDAS toob uut eestikeelset autentimisterminoloogiat, sh:</p>
+  <ul>
+    <li>e-identimine - elektrooniline isikutuvastamine kui protsess;</li> 
+    <li>e-identimise vahend - nt ID-kaart, parool;</li>
+    <li>e-identimise süsteem - süsteem, mille raames väljastatakse e-identimise vahendeid füüsilistele ja juriidilistele isikutele. Nt ID-kaardi süsteem. Iga EL liikmesriik kirjeldab oma e-identimise süsteemid (ühe või mitu), määrab neile usaldusväärsuse tasemed. Euroopa Komisjon avaldab nimekirja liikmesriikide e-identimise süsteemidest;</li>
+    <li>autentimise mehhanism - protseduur, kus füüsiline või juriidiline isik kasutab e-identimise vahendit selleks, et kinnitada oma isikusamasust tuginevale isikule;</li>
+    <li>tuginev isik - e-teenust osutav infosüsteem, mis tuginedes autentimise mehhanismi töö tulemusele, lubab või ei luba isiku teenusesse;</li>
+    <li>usaldusväärsuse tase - EL piiriülestes e-teenustes autentimisel kasutatavate e-identimise süsteemide raames väljastatud e-identimise vahenditele määratakse usaldusväärsuse tase. Usaldusväärsuse tasemeid on kolm: madal, märkimisväärne ja kõrge.</li>
+  </ul>
+
+<h3>Autentimise regulatsioon teistes riikides</h3>
+<p>UK-s on avalike teenuste autentimist reguleeritud hea praktika juhistega "Nõuded avalike e-teenuste turvaliseks osutamiseks" ja "Isiku identiteedi tõendamine ja kontrollimine" [GP]. E-teenuste omanik määrab Eesti ISKE-ga mõneti sarnase 6-sammulise protsessi tulemusena e-teenuse nõutava turvataseme (neli taset). Nõutavast turvatasemest tulenevad nõuded autentimise tugevusele - need on esitatud ISKE-laadsed kataloogis ja on tehnoloogianeutraalsed.</p>
+<ul>
+  <li><a href='https://www.gov.uk/government/publications/requirements-for-secure-delivery-of-online-public-services'>CESG (2012) Good practice guide (GPG 43) [Requirements for secure delivery of online public services</a>.</li>
+  <li>CESG (2014) <a href='https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/370033/GPG_45_identity_proofing_v2_3_July_2014.pdf'>Good Practice Guide No. 45 Identity Proofing and Verification of an Individual</a>.</li>
+</ul>
+
+<p>USA-s reguleerib avalike teenuste autentimist NIST 800-63-02 "Elektroonilise autentimise juhis" aastast 2013.
+Autentimismeetodite tulevikusuundadest kohta sisaldavad olulist teavet NIST 800-63-02 kohta kogutud arvamused.</p>
+<ul>
+  <li>NIST (2013) <a href='http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-2.pdf'>
+  	NIST Special Publication 800-63-2. Electronic Authentication Guideline</a>.</li>
+  <li>NIST (2015) <a href='http://csrc.nist.gov/groups/ST/eauthentication/sp800-63-2-comments-received-2015.pdf'>
+  	Public Comments Received on NIST SP 800-63-2: Electronic Authentication Guideline</a>.</li>
+</ul>
+
+<p>Saksamaal reguleerib avalike teenuste autentimist BSI juhis TR-03107.</p>
+<ul>
+  <li>BSI (2014) <a href='https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03107/index_htm.html'>Technische Richtlinie TR-03107 Elektronische Identitäten und Vertrauensdienste im E-Government</a>;
+  Teil 1: <a href='https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR03107/TR-03107-1.pdf'>
+  	Vertrauensniveaus und Mechanismen</a>.
+  </li>
+</ul> 
+
+<p>Hollandis on autentimise juhis 2012. aastast.</p>
+<ul>
+  <li>The Standardisation Forum (2012) <a href='https://www.forumstandaardisatie.nl/fileadmin/os/publicaties/HR_Betrouwbaarheidsniveaus_EN_WEB.pdf'>Assurance levels for authentication for electronic government services</a>.</li>
+</ul>
+
+<h3>Rahvusvahelised autentimise standardid</h3>
+<ul>
+  <li>EL piiriülene autentimissüsteem tugineb Rahvusvahelise Telekommunikatsiooniliidu standardile X.1254;
+  see standard on avaldatud ka ISO 29115 nime all.<br/>
+  [ITU-T/ISO29115] ITU-T (2013) <a href='http://www.itu.int/rec/T-REC-X.1254/en'>Rec. X.1254: Entity authentication assurance 
+  framework</a><br/>
+  ISO/IEC 29115:2013 Information technology -- Security techniques -- Entity authentication assurance framework.</li>
+  <li>[Tilton] Tilton, C (2014) Tilton (2014)
+  <a href='http://www.biometrics.org/bc2014/presentations/Wed_1516_Tilton_1540.pdf'>Standards for Identity & Authentication</a>.</li>
+</ul>
+
+</div></div>  
+	
+</div><!-- container -->
+
+<footer>
+</footer>
+
+</body>
+</html>
+
