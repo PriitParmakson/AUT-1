@@ -31,71 +31,63 @@
 
 <div class='container'>
 <h1>Autentimisprofiil</h1>
-<p><i>Hinda e-teenuse autentimislahendust. Vasta küsimustele ja saad hinnangu oma e-teenuse autentimislahendusele</i></p>
+<p><i>Hinda e-teenuse autentimislahendust. Vasta küsimustele ja saad hinnangu oma e-teenuse autentimislahendusele. Lisaks saad soovitusi autentimislahenduse teostamiseks.</i></p>
 <p>&nbsp;</p>
 
+<!-- Teenuse nimetus ja skoor -->
 <div class="row">
-<div class='col-sm-6 col-md-6 col-lg-6'>
-  <form>
-    <div class="form-group">
-    <!-- label for="f1">e-teenuse nimetus:</label -->
-    <input type="text" class="form-control" id="f1" placeholder="e-teenuse nimetus">
-    </div>
-  </form>  
+  <div class='col-sm-6 col-md-6 col-lg-6'>
+    <form>
+      <div class="form-group">
+      <!-- label for="f1">e-teenuse nimetus:</label -->
+      <input type="text" class="form-control" id="f1" placeholder="e-teenuse nimetus">
+      </div>
+    </form>  
+  </div>
+
+  <div class='col-sm-6 col-md-6 col-lg-6'>
+    <h2 style='text-align: right; margin-top: 0;'>Skoor: <span id='skoor'>0</span></h2>
+  </div>
 </div>
 
-<div class='col-sm-6 col-md-6 col-lg-6'>
-<h2 style='text-align: right; margin-top: 0;'>Skoor: <span id='skoor'>0</span></h2>
-</div>
+<!-- Profiilid -->
+<div class='row rohepaan'>
+  <!-- Teenuse profiil -->
+  <div class='col-sm-6 col-md-6 col-lg-6'>
+    <table class='table table-condensed'>
+    <tr><td>1. Teenuse profiil</td><td></td></tr>
+    <tr><td>1.1. teenuse liik:</td><td class='D' id='PR11'>?</td></tr>
+    <tr><td>1.2. asutusesisene või -ülene:</td><td class='D' id='PR12'>?</td></tr>
+    <tr><td>1.3. administreerimisliides:</td><td class='D' id='PR13'>?</td></tr>
+    <tr><td>1.4. A2C või A2B:</td><td class='D' id='PR14'>?</td></tr>
+    <tr><td>1.5. kanal (inimkasutajatele):</td><td class='D' id='PR15'>?</td></tr>
+    <tr><td>1.6. kanal (masinkasutajatele):</td><td class='D' id='PR16'>?</td></tr>
+    <tr><td>1.7. kooskasutamine teiste e-teenustega:</td><td class='D' id='PR17'>?</td></tr>
+    <tr><td>2. Kasutaja profiil</td><td></td></tr>
+    <tr><td>2.1. kasutaja liik:</td><td class='D' id='PR21'>?</td></tr>
+    <tr><td>2.2. kodakondsus:</td><td class='D' id='PR22'>?</td></tr>
+    <tr><td>3. Autentimisvajadus</td><td></td></tr>
+    <tr><td>3.1. autentimisvajadus:</td><td class='D' id='PR31'>?</td></tr>
+    <tr><td>3.2. autentimisvajaduse ulatus:</td><td class='D' id='PR32'>?</td></tr>
+    <tr><td>3.3. autentimise kasutajasõbralikkus:</td><td class='D' id='PR33'>?</td></tr>
+    </table>
+  </div>
 
-</div>
-
-<div class="row">
-<!-- Teenuse profiil -->
-<div class='col-sm-6 col-md-6 col-lg-6'>
-<table class='table table-condensed'>
-<tr><td>1. Teenuse profiil</td><td></td></tr>
-<tr><td>1.1. teenuse liik:</td><td class='D' id='PR11'>?</td></tr>
-<tr><td>1.2. asutusesisene või -ülene:</td><td class='D' id='PR12'>?</td></tr>
-<tr><td>1.3. administreerimisliides:</td><td class='D' id='PR13'>?</td></tr>
-<tr><td>1.4. A2C või A2B:</td><td class='D' id='PR14'>?</td></tr>
-<tr><td>1.5. kanal (inimkasutajatele):</td><td class='D' id='PR15'>?</td></tr>
-<tr><td>1.6. kanal (masinkasutajatele):</td><td class='D' id='PR16'>?</td></tr>
-<tr><td>1.7. kooskasutamine teiste e-teenustega:</td><td class='D' id='PR17'>?</td></tr>
-<tr><td>2. Kasutaja profiil</td><td></td></tr>
-<tr><td>2.1. kasutaja liik:</td><td class='D' id='PR21'>?</td></tr>
-<tr><td>2.2. kodakondsus:</td><td class='D' id='PR22'>?</td></tr>
-<tr><td>3. Autentimisvajadus</td><td></td></tr>
-<tr><td>3.1. </td><td class='D' id='PR31'>?</td></tr>
-<tr><td>3.2. autentimisvajaduse ulatus:</td><td class='D' id='PR32'>?</td></tr>
-<tr><td>3.3. autentimise kasutajasõbralikkus:</td><td class='D' id='PR33'>?</td></tr>
-</table>
-</div>
-
-<!-- Tehnoloogiline profiil -->
-<div class='col-sm-6 col-md-6 col-lg-6'>
-<table class='table table-condensed'>
-<tr><td>4. Tehnoloogiline profiil</td><td></td></tr>
-<tr><td>4.1. autentimisteenuse kasutamine:</td><td class='D' id='PR41'>?</td></tr>
-<tr><td>4.2. kasutatavad e-identimise süsteemid ja autentimisvahendid:</td><td class='D' id='PR42'>?</td></tr>
-<tr><td>4.3. autentimist teostav rakendus:</td><td class='D' id='PR43'>?</td></tr>
-</table>
-</div></div>
+  <!-- Tehnoloogiline profiil -->
+  <div class='col-sm-6 col-md-6 col-lg-6'>
+    <table class='table table-condensed'>
+    <tr><td>4. Tehnoloogiline profiil</td><td></td></tr>
+    <tr><td>4.1. autentimisteenuse kasutamine:</td><td class='D' id='PR41'>?</td></tr>
+    <tr><td>4.2. kasutatavad e-identimise süsteemid ja autentimisvahendid:</td><td class='D' id='PR42'>?</td></tr>
+    <tr><td>4.3. autentimist teostav rakendus:</td><td class='D' id='PR43'>?</td></tr>
+    </table>
+  </div>
+</div><!-- Profiilid -->
 
 <hr>
 
 <!-- Küsimustik -->
 <div class="row"><div class='col-sm-8 col-md-8 col-lg-8'>
-	<!-- h3>Mis on autentimine?</h3>
-	<ul>
-	<li>Autentimine on protseduur, millega tehakse kindlaks e-teenuse kasutaja isik; s.t isik, kellele e-teenust osutatakse - kes ta on või keda ta väidab end olevat.<br/>
-	Märkus. Ka e-teenust osutav infosüsteem peab kasutajale oma ehtsust tõestama. Kasutajat abistab veebisirvija, kontrollides serveri sertifikaati ja kuvades aadressiribal teenusepakkuja kontollitud nime.</li>
-	<li>Autentimine on oluline nii kasutaja kui ka e-teenuse osutaja, samuti teiste isikute kaitseks. Identiteedivargused, andmelekete jm väärnähtuste tagajärjed võivad olla väga tõsised. Personaliseeritud e-teenuste osutamisel ei saa läbi kasutajate autentimiseta.</li>
-	<li>Laiemas tähenduses on autentimine ka sõnumi või muu teabe tervikluse kontrollimine (andmeautentimine, teave on autentne = ei ole muudetud).</li>
-	</ul -->
-
-<!-- Küsimustik -->
-
 <form id='F11' class='Q' autocomplete='off'>
 
 <h3>1. Teenuse profiil</h3>
