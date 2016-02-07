@@ -11,3 +11,9 @@ li { margin-bottom: 0.5em; }
 /* Lingid NB! Bootstrapi ümberdefineerimine */
 a { background-color: inherit; color: #009999;
   text-decoration: none; }
+
+.Q { padding-left: 2em; }  
+.D { color: red; }
+
+.radio, .checkbox { margin-left: 2em; }
+.form-control { font-size: 16px; }
